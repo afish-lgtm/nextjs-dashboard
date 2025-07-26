@@ -6,17 +6,11 @@ import { lusitana } from "@/app/ui/fonts";
 import styles from "@/app/ui/home.module.css";
 import Image from "next/image";
 
-export default function Page({ num }: { num: number }) {
-  const isPending = num ? 1 : 2;
+export default function Page() {
   return (
     <main className={clsx("flex min-h-screen flex-col p-6")}>
       <div className="relative w-0 h-0 border-l-[15px] border-r-[15px] border-b-[26px] border-l-transparent border-r-transparent border-b-black" />
-      <div
-        className={clsx(
-          "w-[50px] h-[50px]",
-          isPending === 1 ? "bg-red-500" : "bg-blue-500"
-        )}
-      />
+      <div className="w-[50px] h-[50px] bg-blue-500" />
       <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
         <AcmeLogo />
       </div>
